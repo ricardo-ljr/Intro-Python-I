@@ -69,6 +69,7 @@ def f4(*args, **kwargs):
     for key, value in kwargs.items():
         print("key: %s , value: %s" % (key, value))
 
+
     # Should print
     # key: a, value: 12
     # key: b, value: 30
@@ -86,5 +87,9 @@ d = {
     "hp": 3
 }
 
+new_d = d.copy()
+
 # How do you have to modify the f4 call below to make this work?
-f4(d)
+f4(**d)
+
+#
